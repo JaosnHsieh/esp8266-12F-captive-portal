@@ -1,4 +1,8 @@
-# get-wifi-client-ip-and-send-http-back
+# get-http-client-ip-and-send-http-back
+
+### this only get ip when get http connection but not when wifi client connected to it
+
+https://github.com/esp8266/Arduino/issues/2100
 
 this is a test repo for testing `captive portal` on iOS & Android system.
 

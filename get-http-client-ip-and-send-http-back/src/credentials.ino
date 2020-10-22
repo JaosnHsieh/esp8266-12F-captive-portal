@@ -1,12 +1,14 @@
 /** Load WLAN credentials from EEPROM */
-void loadCredentials() {
+void loadCredentials()
+{
   EEPROM.begin(512);
   EEPROM.get(0, ssid);
   EEPROM.get(0 + sizeof(ssid), password);
   char ok[2 + 1];
   EEPROM.get(0 + sizeof(ssid) + sizeof(password), ok);
   EEPROM.end();
-  if (String(ok) != String("OK")) {
+  if (String(ok) != String("OK"))
+  {
     ssid[0] = 0;
     password[0] = 0;
   }
@@ -16,7 +18,8 @@ void loadCredentials() {
 }
 
 /** Store WLAN credentials to EEPROM */
-void saveCredentials() {
+void saveCredentials()
+{
   EEPROM.begin(512);
   EEPROM.put(0, ssid);
   EEPROM.put(0 + sizeof(ssid), password);
